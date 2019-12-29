@@ -33,13 +33,22 @@ function getNewLetter(letter,shift){
 encryptBtn.onclick = function() {
   msg = (document.getElementById("msg").value).split("");
   shift= parseInt(document.getElementById("shift").value);
-
-  for(let i=0;i<msg.length;i++){
-    if(inAlpha(msg[i])){
-      msg[i]=getNewLetter(msg[i],shift);
+  
+  if(msg !="" && shift!="" ){
+    for(let i=0;i<msg.length;i++){
+      if(inAlpha(msg[i])){
+        msg[i]=getNewLetter(msg[i],shift);
+      }
     }
+    document.getElementById("final").innerHTML="New Message: "+ msg.join("");
+
+    document.getElementById("msg").value = "";
+    document.getElementById("shift").value = "";
   }
-  document.getElementById("final").innerHTML="New Message: "+ msg.join("");
+  else{
+    document.getElementById("msg").value = "Please Enter message..";
+    document.getElementById("shift").value = "Please enter a number..";
+  }
 }
 
 

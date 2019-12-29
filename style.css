@@ -1,4 +1,28 @@
+body {
+ font-family: 'Work Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+ font-family: 'Crimson Text', serif;
+}
+input{
+  border-radius:5%;
+  font-family: 'Work Sans';
+}
 div{
   width:100%;
-  margin:1% 0%;
+ 
+}
+button{
+  margin-top:3%;
+  padding:2%;
+  border-radius:8%;
+  cursor: pointer;
+}
+#container{
+  margin: 5% auto;
+  width:15%;
+  padding:3%;
+  background-color:#07889b;
+  border-radius:2%;
+  color:white;
 }

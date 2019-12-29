@@ -31,7 +31,7 @@ function getNewLetter(letter,shift){
 
 
 encryptBtn.onclick = function() {
-  msg = (document.getElementById("msg").value).split("");
+  msg = (document.getElementById("msg").value.toLowerCase()).split("");
   shift= parseInt(document.getElementById("shift").value);
   
   if(msg !="" && shift!="" ){
